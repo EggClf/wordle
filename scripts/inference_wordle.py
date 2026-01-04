@@ -263,7 +263,7 @@ def main():
     parser.add_argument(
         "--base_model_path",
         type=str,
-        default="/workspace/models/Qwen2.5-3B",
+        default="/workspace/models/Qwen2.5-0.5B",
         help="Path to base model"
     )
     parser.add_argument(

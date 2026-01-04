@@ -35,12 +35,12 @@ logger = logging.getLogger(__name__)
 
 class Config:
     # Paths (for offline mode)
-    model_name = "/workspace/models/Qwen2.5-3B"
-    dataset_path = "/workspace/data/wordle-sft"
+    model_name = "/workspace/models/Qwen2.5-0.5B"
+    dataset_path = "/workspace/data/wordle-grpo"
     word_list_path = "/workspace/data/wordle-words.csv"  # Will be created if not exists
     
     # Output paths
-    sft_output_dir = "/workspace/outputs/wordle-sft"
+    sft_output_dir = "/workspace/outputs/wordle-grpo"
     grpo_output_dir = "/workspace/outputs/wordle-grpo"
     
     # LoRA Configuration
