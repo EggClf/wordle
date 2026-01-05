@@ -4,6 +4,9 @@ Uses locally saved model and dataset with advanced reward functions
 """
 
 import os
+import sys
+from pathlib import Path
+
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
 os.environ["HF_DATASETS_OFFLINE"] = "1"
@@ -34,15 +37,18 @@ logger = logging.getLogger(__name__)
 # ============================================
 
 class Config:
+    # Use Path for cross-platform compatibility
+    workspace_root = Path("/workspace")
+    
     # Paths (for offline mode)
-    model_name = "/workspace/models/Qwen2.5-0.5B"
-    dataset_path = "/workspace/data/wordle-grpo"
-    word_list_path = "/workspace/data/wordle-words.csv"  # Will be created if not exists
+    model_name = str(workspace_root / "models" / "Qwen2.5-0.5B")
+    dataset_path = str(workspace_root / "data" / "wordle-grpo")
+    word_list_path = str(workspace_root / "data" / "five_letter_words.csv")
     
-    # Output paths
-    sft_output_dir = "/workspace/outputs/wordle-grpo"
-    grpo_output_dir = "/workspace/outputs/wordle-grpo"
-    
+    # Output paths - Different directories
+    sft_output_dir = str(workspace_root / "outputs" / "wordle-sft")
+    grpo_output_dir = str(workspace_root / "outputs" / "wordle-grpo")
+  
     # LoRA Configuration
     lora_r = 16
     lora_alpha = 32
@@ -82,6 +88,31 @@ class Config:
     
     # Misc
     seed = 42
+    
+    @classmethod
+    def validate_paths(cls):
+        """Validate that all required paths exist"""
+        errors = []
+        
+        if not Path(cls.model_name).exists():
+            errors.append(f"Base model not found: {cls.model_name}")
+        
+        if not Path(cls.dataset_path).exists():
+            errors.append(f"Dataset not found: {cls.dataset_path}")
+        
+        if not Path(cls.word_list_path).exists():
+            errors.append(f"Word list not found: {cls.word_list_path}")
+        
+        if errors:
+            logger.error("Configuration validation failed:")
+            for error in errors:
+                logger.error(f"  - {error}")
+            sys.exit(1)
+        
+        # Create output directories
+        Path(cls.sft_output_dir).mkdir(parents=True, exist_ok=True)
+        Path(cls.grpo_output_dir).mkdir(parents=True, exist_ok=True)
+        logger.info("Configuration validated successfully")
 
 config = Config()
 
@@ -348,10 +379,29 @@ def setup_model_and_tokenizer(model_path, use_4bit=False, use_flash_attention=Tr
         "device_map": "auto",
     }
     
+    # Try Flash Attention with fallback
     if use_flash_attention:
-        model_kwargs["attn_implementation"] = "flash_attention_2"
+        try:
+            import flash_attn
+            model_kwargs["attn_implementation"] = "flash_attention_2"
+            logger.info("Using Flash Attention 2")
+        except ImportError:
+            logger.warning("Flash Attention not available, using eager attention")
+            model_kwargs["attn_implementation"] = "eager"
+    else:
+        model_kwargs["attn_implementation"] = "eager"
     
-    model = AutoModelForCausalLM.from_pretrained(model_path, **model_kwargs)
+    try:
+        model = AutoModelForCausalLM.from_pretrained(model_path, **model_kwargs)
+    except Exception as e:
+        logger.error(f"Failed to load model: {e}")
+        # Retry without flash attention
+        if model_kwargs.get("attn_implementation") == "flash_attention_2":
+            logger.info("Retrying without flash attention...")
+            model_kwargs["attn_implementation"] = "eager"
+            model = AutoModelForCausalLM.from_pretrained(model_path, **model_kwargs)
+        else:
+            raise
     
     return model, tokenizer
 
@@ -367,20 +417,22 @@ def format_wordle_prompt(example):
         return {"text": text}
 
 def create_word_list():
-    """Create word list CSV if it doesn't exist"""
+    """Validate word list CSV exists and is properly formatted"""
     if not os.path.exists(config.word_list_path):
-        logger.info("Creating default word list...")
-        # Create a basic word list (you can expand this)
-        words = [
-            "CRANE", "SLATE", "AUDIO", "RAISE", "STARE",
-            "HOUSE", "LODGE", "PIECE", "JUDGE", "APPLE",
-            "BEACH", "BREAD", "CHAIR", "DREAM", "EARTH",
-            # Add more common 5-letter words
-        ]
-        df = pd.DataFrame({"Word": words})
-        os.makedirs(os.path.dirname(config.word_list_path), exist_ok=True)
-        df.to_csv(config.word_list_path, index=False)
-        logger.info(f"Word list created at {config.word_list_path}")
+        logger.error(f"Word list file not found: {config.word_list_path}")
+        logger.error("Please ensure five_letter_words.csv exists in /workspace/data/")
+        sys.exit(1)
+    
+    # Validate the word list format
+    try:
+        word_df = pd.read_csv(config.word_list_path)
+        if "Word" not in word_df.columns:
+            logger.error(f"Word list must have a 'Word' column")
+            sys.exit(1)
+        logger.info(f"Word list validated: {len(word_df)} words loaded")
+    except Exception as e:
+        logger.error(f"Failed to load word list: {e}")
+        sys.exit(1)
 
 # ============================================
 # Stage 1: SFT Training
@@ -486,13 +538,19 @@ def train_grpo(sft_model_path):
     logger.info("STAGE 2: GRPO Training")
     logger.info("=" * 60)
     
-    # Load SFT model
-    logger.info(f"Loading SFT model from {sft_model_path}")
+    # Load base model first
+    logger.info(f"Loading base model from {config.model_name}")
     model, tokenizer = setup_model_and_tokenizer(
-        sft_model_path,
+        config.model_name,
         use_4bit=config.use_4bit,
         use_flash_attention=config.use_flash_attention
     )
+    
+    # Load PEFT adapter from SFT
+    logger.info(f"Loading PEFT adapter from {sft_model_path}")
+    from peft import PeftModel
+    model = PeftModel.from_pretrained(model, sft_model_path)
+    logger.info("PEFT adapter loaded successfully")
     
     # Load dataset
     dataset = load_from_disk(config.dataset_path)
@@ -599,11 +657,21 @@ def main():
     logger.info("=" * 60)
     logger.info(f"Model: {config.model_name}")
     logger.info(f"Dataset: {config.dataset_path}")
-    logger.info(f"Device: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'}")
+    logger.info(f"Word List: {config.word_list_path}")
+    
+    # Validate CUDA availability
+    if not torch.cuda.is_available():
+        logger.error("CUDA not available! This training requires GPU.")
+        sys.exit(1)
+    
+    logger.info(f"Device: {torch.cuda.get_device_name(0)}")
     logger.info(f"GPUs: {torch.cuda.device_count()}")
     logger.info("=" * 60)
     
-    # Create word list if needed
+    # Validate configuration
+    config.validate_paths()
+    
+    # Validate word list
     create_word_list()
     
     # Stage 1: SFT

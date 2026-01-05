@@ -5,7 +5,7 @@
 # Uses DeepSpeed for distributed training
 # ============================================
 
-set -e
+set -euo pipefail  # Exit on error, undefined vars, pipe failures
 
 echo "=========================================="
 echo "Wordle Training - Multi-GPU Mode"
@@ -80,12 +80,34 @@ LOG_DIR="/workspace/logs"
 mkdir -p $OUTPUT_DIR
 mkdir -p $LOG_DIR
 
-# Verify DeepSpeed config exists
+# Verify all required files exist
+if [ ! -f "$SCRIPT_PATH" ]; then
+    echo "Error: Training script not found at $SCRIPT_PATH"
+    exit 1
+fi
+
 if [ ! -f "$DS_CONFIG" ]; then
     echo "Error: DeepSpeed config not found at $DS_CONFIG"
     exit 1
 fi
 
+if [ ! -d "/workspace/data/wordle-grpo" ]; then
+    echo "Error: Dataset not found at /workspace/data/wordle-grpo"
+    exit 1
+fi
+
+if [ ! -f "/workspace/data/five_letter_words.csv" ]; then
+    echo "Error: Word list not found at /workspace/data/five_letter_words.csv"
+    exit 1
+fi
+
+if [ ! -d "/workspace/models/Qwen2.5-0.5B" ]; then
+    echo "Error: Base model not found at /workspace/models/Qwen2.5-0.5B"
+    exit 1
+fi
+
+echo ""
+echo "All required files validated successfully"
 echo ""
 echo "DeepSpeed Configuration:"
 cat $DS_CONFIG

@@ -1,0 +1,2559 @@
+prompt,word_list,past_guess_history,secret
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make your first 5-letter word guess.<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,[],ABHOR
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(x) E(-)
+Guess 2: SWEAT -> Feedback: S(x) W(x) E(-) A(-) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(x) E(-)'], ['SWEAT', 'S(x) W(x) E(-) A(-) T(x)']]",ALLEY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(x) E(x)
+Guess 2: ADULT -> Feedback: A(✓) D(x) U(x) L(-) T(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(x) E(x)'], ['ADULT', 'A(✓) D(x) U(x) L(-) T(✓)']]",ALLOT
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(-) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(-) E(x)']]",ANNUL
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(x) E(x)
+Guess 2: BLOAT -> Feedback: B(✓) L(x) O(x) A(-) T(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(x) E(x)'], ['BLOAT', 'B(✓) L(x) O(x) A(-) T(-)']]",BATTY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(x) E(x)
+Guess 2: FAULT -> Feedback: F(x) A(✓) U(x) L(x) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(x) E(x)'], ['FAULT', 'F(x) A(✓) U(x) L(x) T(x)']]",BAWDY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(-)']]",BEFIT
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(-)
+Guess 2: FILED -> Feedback: F(x) I(x) L(-) E(✓) D(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(-)'], ['FILED', 'F(x) I(x) L(-) E(✓) D(x)']]",BEVEL
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(✓) R(x) A(✓) N(x) E(x)
+Guess 2: COAST -> Feedback: C(✓) O(-) A(✓) S(-) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(✓) R(x) A(✓) N(x) E(x)'], ['COAST', 'C(✓) O(-) A(✓) S(-) T(x)']]",CHAOS
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(✓) R(-) A(✓) N(x) E(x)
+Guess 2: CHAIR -> Feedback: C(✓) H(✓) A(✓) I(x) R(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(✓) R(-) A(✓) N(x) E(x)'], ['CHAIR', 'C(✓) H(✓) A(✓) I(x) R(-)']]",CHARD
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(✓) R(-) A(x) N(x) E(x)
+Guess 2: CURLY -> Feedback: C(✓) U(x) R(-) L(x) Y(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(✓) R(-) A(x) N(x) E(x)'], ['CURLY', 'C(✓) U(x) R(-) L(x) Y(x)']]",CHIRP
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(✓) R(x) A(x) N(x) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(✓) R(x) A(x) N(x) E(✓)']]",CHUTE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(✓) R(x) A(x) N(x) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(✓) R(x) A(x) N(x) E(x)']]",CLOTH
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(✓) R(✓) A(✓) N(x) E(x)
+Guess 2: CRASH -> Feedback: C(✓) R(✓) A(✓) S(x) H(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(✓) R(✓) A(✓) N(x) E(x)'], ['CRASH', 'C(✓) R(✓) A(✓) S(x) H(x)']]",CRACK
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(✓) R(✓) A(x) N(x) E(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(✓) R(✓) A(x) N(x) E(-)']]",CREED
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(✓) R(✓) A(x) N(x) E(-)
+Guess 2: CREST -> Feedback: C(✓) R(✓) E(✓) S(✓) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(✓) R(✓) A(x) N(x) E(-)'], ['CREST', 'C(✓) R(✓) E(✓) S(✓) T(x)']]",CRESS
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(-) N(x) E(-)
+Guess 2: TAPER -> Feedback: T(x) A(-) P(x) E(-) R(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(-) N(x) E(-)'], ['TAPER', 'T(x) A(-) P(x) E(-) R(✓)']]",DEBAR
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(-)
+Guess 2: THIEF -> Feedback: T(-) H(x) I(x) E(-) F(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(-)'], ['THIEF', 'T(-) H(x) I(x) E(-) F(x)']]",DEPOT
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(✓) A(x) N(✓) E(✓)
+Guess 2: BRINE -> Feedback: B(x) R(✓) I(x) N(✓) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(✓) A(x) N(✓) E(✓)'], ['BRINE', 'B(x) R(✓) I(x) N(✓) E(✓)']]",DRONE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(x)']]",DUMPY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+10    Make your first 5-letter word guess.
+Name: prompt, dtype: object<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,[],['ERROR']
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(✓) N(x) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(✓) N(x) E(x)']]",FLAKY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(✓) A(✓) N(x) E(x)
+Guess 2: BRASH -> Feedback: B(x) R(✓) A(✓) S(x) H(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(✓) A(✓) N(x) E(x)'], ['BRASH', 'B(x) R(✓) A(✓) S(x) H(x)']]",FRAIL
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(✓) A(x) N(x) E(x)
+Guess 2: FROST -> Feedback: F(✓) R(✓) O(x) S(x) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(✓) A(x) N(x) E(x)'], ['FROST', 'F(✓) R(✓) O(x) S(x) T(x)']]",FRILL
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(x) N(x) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(x) N(x) E(x)']]",GLORY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(-) N(x) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(-) N(x) E(x)']]",HARPY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(x) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(x) E(✓)']]",HAUTE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(-) R(x) A(-) N(x) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(-) R(x) A(-) N(x) E(x)']]",ILIAC
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(-) E(x)
+Guess 2: MASON -> Feedback: M(x) A(-) S(x) O(x) N(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(-) E(x)'], ['MASON', 'M(x) A(-) S(x) O(x) N(-)']]",INLAY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(x) E(x)
+Guess 2: ALBUM -> Feedback: A(-) L(-) B(x) U(x) M(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(x) E(x)'], ['ALBUM', 'A(-) L(-) B(x) U(x) M(x)']]",LOYAL
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(-) E(x)
+Guess 2: BANJO -> Feedback: B(x) A(✓) N(✓) J(x) O(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(-) E(x)'], ['BANJO', 'B(x) A(✓) N(✓) J(x) O(x)']]",MANGA
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(x) N(x) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(x) N(x) E(✓)']]",MERGE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(x)
+Guess 2: SLUMP -> Feedback: S(x) L(x) U(-) M(-) P(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(x)'], ['SLUMP', 'S(x) L(x) U(-) M(-) P(x)']]",MUDDY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(-) E(x)
+Guess 2: KINGS -> Feedback: K(x) I(✓) N(-) G(-) S(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(-) E(x)'], ['KINGS', 'K(x) I(✓) N(-) G(-) S(x)']]",NIGHT
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(-) E(x)
+Guess 2: INPUT -> Feedback: I(-) N(-) P(x) U(x) T(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(-) E(x)'], ['INPUT', 'I(-) N(-) P(x) U(x) T(-)']]",NINTH
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(-) R(-) A(x) N(x) E(-)
+Guess 2: RELIC -> Feedback: R(-) E(✓) L(x) I(x) C(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(-) R(-) A(x) N(x) E(-)'], ['RELIC', 'R(-) E(✓) L(x) I(x) C(-)']]",PERCH
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(-) R(x) A(x) N(x) E(x)
+Guess 2: MUSIC -> Feedback: M(x) U(x) S(x) I(-) C(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(-) R(x) A(x) N(x) E(x)'], ['MUSIC', 'M(x) U(x) S(x) I(-) C(-)']]",PITCH
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(x)
+Guess 2: SLOTH -> Feedback: S(-) L(x) O(-) T(-) H(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(x)'], ['SLOTH', 'S(-) L(x) O(-) T(-) H(x)']]",POSIT
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(✓) E(x)
+Guess 2: BLOND -> Feedback: B(x) L(x) O(-) N(✓) D(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(✓) E(x)'], ['BLOND', 'B(x) L(x) O(-) N(✓) D(✓)']]",POUND
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(✓) A(✓) N(✓) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(✓) A(✓) N(✓) E(x)']]",PRANK
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(✓) A(x) N(x) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(✓) A(x) N(x) E(x)']]",PRIOR
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(-) N(-) E(x)
+Guess 2: NADIR -> Feedback: N(-) A(✓) D(-) I(x) R(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(-) N(-) E(x)'], ['NADIR', 'N(-) A(✓) D(-) I(x) R(-)']]",RANDY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(✓) N(x) E(-)
+Guess 2: PEARL -> Feedback: P(x) E(✓) A(✓) R(✓) L(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(✓) N(x) E(-)'], ['PEARL', 'P(x) E(✓) A(✓) R(✓) L(x)']]",REARM
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(-) R(-) A(x) N(x) E(-)
+Guess 2: RECUT -> Feedback: R(✓) E(✓) C(✓) U(✓) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(-) R(-) A(x) N(x) E(-)'], ['RECUT', 'R(✓) E(✓) C(✓) U(✓) T(x)']]",RECUR
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(x) N(x) E(-)
+Guess 2: REMIT -> Feedback: R(✓) E(✓) M(x) I(x) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(x) N(x) E(-)'], ['REMIT', 'R(✓) E(✓) M(x) I(x) T(x)']]",REEDY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(-) N(-) E(-)
+Guess 2: RAVEN -> Feedback: R(✓) A(-) V(x) E(-) N(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(-) N(-) E(-)'], ['RAVEN', 'R(✓) A(-) V(x) E(-) N(-)']]",RENAL
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(x) N(x) E(-)
+Guess 2: REBUT -> Feedback: R(✓) E(-) B(x) U(x) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(x) N(x) E(-)'], ['REBUT', 'R(✓) E(-) B(x) U(x) T(x)']]",ROGER
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(x) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(x) E(x)']]",SADLY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(x) E(x)
+Guess 2: ADULT -> Feedback: A(-) D(x) U(x) L(-) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(x) E(x)'], ['ADULT', 'A(-) D(x) U(x) L(-) T(x)']]",SALSA
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(-) N(x) E(x)
+Guess 2: ABOUT -> Feedback: A(-) B(x) O(x) U(x) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(-) N(x) E(x)'], ['ABOUT', 'A(-) B(x) O(x) U(x) T(x)']]",SAPPY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(-) R(x) A(x) N(✓) E(✓)
+Guess 2: SCONE -> Feedback: S(✓) C(✓) O(x) N(✓) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(-) R(x) A(x) N(✓) E(✓)'], ['SCONE', 'S(✓) C(✓) O(x) N(✓) E(✓)']]",SCENE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(-) R(-) A(x) N(x) E(x)
+Guess 2: ROCKY -> Feedback: R(-) O(-) C(-) K(x) Y(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(-) R(-) A(x) N(x) E(x)'], ['ROCKY', 'R(-) O(-) C(-) K(x) Y(x)']]",SCOUR
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(✓)
+Guess 2: HOUSE -> Feedback: H(x) O(x) U(x) S(-) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(✓)'], ['HOUSE', 'H(x) O(x) U(x) S(-) E(✓)']]",SEIZE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(✓) N(x) E(x)
+Guess 2: FLASH -> Feedback: F(x) L(-) A(✓) S(-) H(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(✓) N(x) E(x)'], ['FLASH', 'F(x) L(-) A(✓) S(-) H(-)']]",SHALT
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(✓) N(✓) E(x)
+Guess 2: PLANK -> Feedback: P(x) L(x) A(✓) N(✓) K(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(✓) N(✓) E(x)'], ['PLANK', 'P(x) L(x) A(✓) N(✓) K(✓)']]",SHANK
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(-)
+Guess 2: SMELT -> Feedback: S(✓) M(x) E(✓) L(✓) T(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(-)'], ['SMELT', 'S(✓) M(x) E(✓) L(✓) T(x)']]",SHELF
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(-) E(x)
+Guess 2: BINGO -> Feedback: B(x) I(x) N(-) G(x) O(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(-) E(x)'], ['BINGO', 'B(x) I(x) N(-) G(x) O(-)']]",SHOWN
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(x)
+Guess 2: GHOST -> Feedback: G(x) H(-) O(x) S(-) T(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(x)'], ['GHOST', 'G(x) H(-) O(x) S(-) T(-)']]",SMITH
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(✓)
+Guess 2: HOUSE -> Feedback: H(x) O(-) U(x) S(-) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(✓)'], ['HOUSE', 'H(x) O(-) U(x) S(-) E(✓)']]",SMOTE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(✓) N(-) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(✓) N(-) E(x)']]",SNAKY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(✓) N(-) E(x)
+Guess 2: INAPT -> Feedback: I(-) N(-) A(✓) P(x) T(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(✓) N(-) E(x)'], ['INAPT', 'I(-) N(-) A(✓) P(x) T(-)']]",STAIN
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(x) N(x) E(-)
+Guess 2: OTHER -> Feedback: O(x) T(✓) H(x) E(✓) R(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(x) N(x) E(-)'], ['OTHER', 'O(x) T(✓) H(x) E(✓) R(✓)']]",STEER
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(✓) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(✓) E(✓)']]",STONE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(✓)
+Guess 2: SLOPE -> Feedback: S(✓) L(x) O(✓) P(x) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(✓)'], ['SLOPE', 'S(✓) L(x) O(✓) P(x) E(✓)']]",STOVE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(✓) E(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(✓) E(x)']]",STUNK
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(-)
+Guess 2: SMELT -> Feedback: S(x) M(x) E(-) L(x) T(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(-)'], ['SMELT', 'S(x) M(x) E(-) L(x) T(-)']]",THIEF
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(✓) A(✓) N(x) E(x)
+Guess 2: BRAID -> Feedback: B(x) R(✓) A(✓) I(✓) D(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(✓) A(✓) N(x) E(x)'], ['BRAID', 'B(x) R(✓) A(✓) I(✓) D(x)']]",TRAIL
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(x) N(x) E(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(x) N(x) E(-)']]",TUBER
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(-)
+Guess 2: VOTED -> Feedback: V(x) O(x) T(-) E(✓) D(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(-)'], ['VOTED', 'V(x) O(x) T(-) E(✓) D(x)']]",TWEET
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(✓)
+Guess 2: SLIDE -> Feedback: S(x) L(x) I(x) D(-) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(✓)'], ['SLIDE', 'S(x) L(x) I(x) D(-) E(✓)']]",WEDGE
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(-) R(x) A(x) N(-) E(x)
+Guess 2: SONIC -> Feedback: S(x) O(x) N(✓) I(-) C(-)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(-) R(x) A(x) N(-) E(x)'], ['SONIC', 'S(x) O(x) N(✓) I(-) C(-)']]",WINCH
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(-) E(-)
+Guess 2: NOTES -> Feedback: N(-) O(✓) T(x) E(✓) S(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(-) E(-)'], ['NOTES', 'N(-) O(✓) T(x) E(✓) S(x)']]",WOKEN
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(x) A(x) N(x) E(x)
+Guess 2: SOLID -> Feedback: S(x) O(✓) L(x) I(x) D(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(x) A(x) N(x) E(x)'], ['SOLID', 'S(x) O(✓) L(x) I(x) D(x)']]",WOOZY
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(-) A(x) N(x) E(x)
+Guess 2: BIRDS -> Feedback: B(x) I(x) R(✓) D(x) S(x)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(-) A(x) N(x) E(x)'], ['BIRDS', 'B(x) I(x) R(✓) D(x) S(x)']]",WORTH
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(-) R(✓) A(x) N(x) E(-)
+Guess 2: FRECK -> Feedback: F(x) R(✓) E(✓) C(✓) K(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(-) R(✓) A(x) N(x) E(-)'], ['FRECK', 'F(x) R(✓) E(✓) C(✓) K(✓)']]",WRECK
+"<|im_start|>system
+
+You are playing Wordle, a word-guessing game.
+
+### Game Rules:
+- You have **6 tries** to guess a secret **5-letter** word.
+- Each guess must be a valid **5-letter English word**.
+- After each guess, you will receive feedback indicating how close your guess was.
+
+### Feedback Format:
+Each letter in your guess will receive one of three symbols:
+1. ✓ : The letter is in the word and in the CORRECT position.
+2. - : The letter is in the word but in the WRONG position.
+3. x : The letter is NOT in the word.
+
+### Example:
+Secret Word: BRISK
+
+Guess 1: STORM → Feedback: S(-) T(x) O(x) R(-) M(x)
+Guess 2: BRAVE → Feedback: B(✓) R(✓) A(x) V(x) E(x)
+Guess 3: BRISK → Feedback: B(✓) R(✓) I(✓) S(✓) K(✓)
+
+### Response Format:
+Think through the problem and feedback step by step. Make sure to first add your step by step thought process within <think> </think> tags. Then, return your guessed word in the following format: <guess> guessed-word </guess>.
+<|im_end|>
+<|im_start|>user
+Make a new 5-letter word guess.
+
+ Here is some previous feedback:
+Guess 1: CRANE -> Feedback: C(x) R(✓) A(x) N(x) E(✓)
+Guess 2: PRIME -> Feedback: P(x) R(✓) I(✓) M(x) E(✓)<|im_end|>
+<|im_start|>assistant
+Let me solve this step by step.
+<think>",/workspace/data/five_letter_words.csv,"[['CRANE', 'C(x) R(✓) A(x) N(x) E(✓)'], ['PRIME', 'P(x) R(✓) I(✓) M(x) E(✓)']]",WRITE
